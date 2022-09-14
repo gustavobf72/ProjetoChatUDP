@@ -1,15 +1,15 @@
-from base64 import encode
+from base64 import encode # by Gustavo
 import socket
 import string
 
 def main():
-    HOST = '192.168.1.6' # Endereco IP do Servidor
-    PORT = 5000 # Porta que o Servidor esta
+    HOST = '192.168.1.6'
+    PORT = 5000
     udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     dest = (HOST, PORT)
     print ('\n...Para sair digite <bye>...\n')
     
-    print("Digite hello para conectar")
+    print("Hello para conectar")
     
     while True:
         conec = input("--> ")
