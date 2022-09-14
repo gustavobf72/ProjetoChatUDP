@@ -5,17 +5,17 @@ clientes = []
 def main():
 
     udp = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    HOST = socket.gethostbyname(socket.gethostname()) # Endereco IP do Servidor
-    PORT = 5000 # Porta que o Servidor esta
+    HOST = socket.gethostbyname(socket.gethostname()) 
+    PORT = 5000
     orig = (HOST, PORT)
     try:
         udp.bind(orig)
     except:
-        return print("Que pena não deu certo")
+        return print("Não deu certo, que pena")
 
     while True:
         cliente, addr = udp.recvfrom(1024)
-        print("Conexão recebida de", addr)
+        print("Conectado ao ", addr)
         clientes.append(cliente)
 
 def gerencmsg(cliente):
